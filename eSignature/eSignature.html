@@ -1,0 +1,25 @@
+<template>
+    <lightning-card  title="Digital Signature">
+        <div class="c-container"> 
+            <div style="width: 400px"> 
+                <lightning-input label="Enter text " type="text" value={name} onchange={signIt}></lightning-input>
+                <p>
+                    {headerText}
+                </p>         
+                <p class="slds-m-bottom_small"> 
+                    <canvas name="canvasItem" height="200" width="400px" style="border:2px solid rgb(136, 135, 135);
+                    background: transparent;"></canvas>
+                </p>
+                <p class="slds-m-bottom_small"> 
+                <lightning-button variant="brand" label="Download Signature" title="Save" 
+                    onclick={downloadSignature} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Save Signature" title="Save" 
+                    onclick={saveSignature} class="slds-m-left_x-small"></lightning-button>
+
+                <lightning-button variant="brand" label="Clear" title="Clear" 
+                    onclick={handleClearClick} class="slds-m-left_x-small"></lightning-button>
+                </p>
+            </div>       
+        </div>
+    </lightning-card>
+</template>
